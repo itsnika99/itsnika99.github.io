@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="message">{{setMessage()}}</div>
+
+    <div class="buttons">
+
+        <app-button *ngFor="let module of modules" [module]="module"></app-button>
+
+    </div>
+</div>

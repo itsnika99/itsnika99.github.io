@@ -1,0 +1,167 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use 'assets/variables' as v;
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$my-accent:(
+  50 : #eff5ea,
+  100 : #d8e6ca,
+  200 : #bed6a6,
+  300 : #a4c682,
+  400 : #91b968,
+  500 : #7dad4d,
+  600 : #75a646,
+  700 : #6a9c3d,
+  800 : #609334,
+  900 : #4d8325,
+  A100 : #dcffc3,
+  A200 : #bdff90,
+  A400 : #9fff5d,
+  A700 : #90ff44,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+$my-primary: (
+    50 : #f4f8f1,
+    100 : #e3eddc,
+    200 : #d0e2c5,
+    300 : #bdd6ad,
+    400 : #aecd9c,
+    500 : #a0c48a,
+    600 : #98be82,
+    700 : #8eb677,
+    800 : #84af6d,
+    900 : #73a25a,
+    A100 : #ffffff,
+    A200 : #e5ffd8,
+    A400 : #c4ffa5,
+    A700 : #b3ff8b,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-warn: (
+    50 : #fceee9,
+    100 : #f8d6c9,
+    200 : #f3baa5,
+    300 : #ee9e81,
+    400 : #ea8a66,
+    500 : #e6754b,
+    600 : #e36d44,
+    700 : #df623b,
+    800 : #db5833,
+    900 : #d54523,
+    A100 : #ffffff,
+    A200 : #ffe2dc,
+    A400 : #ffb8a9,
+    A700 : #ffa290,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-typography: mat.define-typography-config();
+$home-app-accent: mat.define-palette($my-accent,500,200,800);
+$home-app-primary: mat.define-palette($my-primary, 500,200,800);
+$home-app-warn: mat.define-palette($my-warn, 500,200,800);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$home-app-theme: mat.define-light-theme((
+  color: (
+    primary: $home-app-primary,
+    accent: $home-app-accent,
+    warn: $home-app-warn,
+  ),
+  typography: $my-typography
+));
+
+
+@include mat.all-component-themes($home-app-theme);
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: v.$bg-color; color:white;}
+
+
+.notification-dot-s {
+  height: 20px;
+  width: 20px;
+  background-color: #e6754b;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  z-index: 50;
+  line-height: 20px;
+}
+
+.notification-dot-l {
+  height: 30px;
+  width: 30px;
+  background-color: #e6754b;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  z-index: 50;
+  line-height: 30px;
+  translate: -10px;
+    margin-top: -10px;
+}

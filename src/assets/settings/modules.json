@@ -1,0 +1,26 @@
+[
+    {
+        "name":"pulizie",
+        "icon":"mop"
+    },
+    {
+        "name":"spesa",
+        "icon":"shopping_cart"
+    },
+    {
+        "name":"finanze",
+        "icon":"payements"
+    },
+    {
+        "name":"to-do",
+        "icon":"lists"
+    },
+    {
+        "name":"coppia",
+        "icon":"favorite"
+    },
+    {
+        "name":"eventi",
+        "icon":"calendar"
+    }
+]
