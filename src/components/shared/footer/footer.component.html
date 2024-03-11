@@ -1,11 +1,13 @@
-<div class="button">
-    <img src="./assets/icons/send.svg" alt="" 
-    class="send-icon" />
-      <!-- <mat-icon>delete</mat-icon> -->
-
-  </div>
-<mat-toolbar class="toolbar" color = "primary">
-    <mat-toolbar-row>
-        <span class="message">{{setMessage()}}</span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div class="button" (click)="togglePanel()">
+    <img src="./assets/icons/mail.svg" alt="" class="send-icon" />
+</div>
+<mat-accordion class="panel">
+    <mat-expansion-panel (opened)="isPanelOpen = true" (closed)="isPanelOpen = false" hideToggle class="panel">
+        <mat-expansion-panel-header>
+            <mat-panel-description>
+                {{setMessage()}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+       <app-bottom-panel></app-bottom-panel>
+    </mat-expansion-panel>
+</mat-accordion>

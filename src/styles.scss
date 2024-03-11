@@ -139,7 +139,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 .notification-dot-s {
   height: 20px;
   width: 20px;
-  background-color: #e6754b;
+  background-color: v.$warn;
   border-radius: 50%;
   display: inline-block;
   font-size: 12px;
@@ -153,7 +153,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 .notification-dot-l {
   height: 30px;
   width: 30px;
-  background-color: #e6754b;
+  background-color: v.$warn;
   border-radius: 50%;
   display: inline-block;
   font-size: 15px;
@@ -164,4 +164,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
   line-height: 30px;
   translate: -10px;
     margin-top: -10px;
+}
+
+
+//material
+
+.mat-expansion-panel-header.mat-expanded,.mat-expansion-panel-header.mat-focus-indicator,.mat-expansion-panel-header-description,
+.mat-expansion-panel-header.mat-expanded:hover, .mat-accordion {
+  background: v.$primary !important;
+  color:white !important;
 }

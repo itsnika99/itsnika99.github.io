@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
 import { MaterialModule } from './material.module';
 import { FooterComponent } from './footer/footer.component';
+import { BottomPanelComponent } from './bottom-panel/bottom-panel.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,11 +15,14 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     ButtonComponent,
     NotificationComponent,
-    FooterComponent
+    FooterComponent,
+    BottomPanelComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     HeaderComponent,

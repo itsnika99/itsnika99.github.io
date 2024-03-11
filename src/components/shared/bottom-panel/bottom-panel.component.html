@@ -1,0 +1,11 @@
+<div class="container">
+    <mat-form-field appearance="fill" color="accent" class="field" floatLabel="always">
+        <mat-label>Leave a short note</mat-label>
+        <input matInput #input maxlength="100" [(ngModel)]="messageInput">
+        <mat-hint align="end">{{input.value.length}}/100</mat-hint>
+    </mat-form-field>
+    <button mat-flat-button color="accent" 
+    class="button"
+    [disabled]="input.value.length == 0"
+     (click)="sendMessage()">Send</button>
+</div>

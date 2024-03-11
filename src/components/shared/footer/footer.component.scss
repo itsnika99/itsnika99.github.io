@@ -1,32 +1,37 @@
 @use '../../../assets/variables' as v;
 
-.message{
+.message {
     width: 100%;
     text-align: center;
     font-weight: 500;
     font-size: x-medium;
-    color:white;
+    color: white;
 }
 
-.container{
+.container {
     display: flex;
 }
 
-.button{
-    height: 30px;
+.button {
+    height: 35px;
     width: 50px;
     border-radius: 50px 50px 0 0;
     background-color: #a0c48a;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: end;
     position: relative;
-   left: calc(50% - 30px);
-    bottom: -5px;
+    left: calc(50% - 25px);
+    bottom: -2px;
+    z-index: 5;
 }
 
-.send-icon{
-    width:30px;
-    height:30px;
-    transform: rotate(-40deg);
+.send-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.panel {
+    background-color: #a0c48a !important;
+    color: white !important;
 }
