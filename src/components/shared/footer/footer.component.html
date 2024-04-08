@@ -2,7 +2,7 @@
     <img src="./assets/icons/mail.svg" alt="" class="send-icon" />
 </div>
 <mat-accordion class="panel">
-    <mat-expansion-panel (opened)="isPanelOpen = true" (closed)="isPanelOpen = false" hideToggle class="panel">
+    <mat-expansion-panel (opened)="isPanelOpen = true" (closed)="isPanelOpen = false" hideToggle class="panel" disabled>
         <mat-expansion-panel-header>
             <mat-panel-description>
                 {{setMessage()}}
